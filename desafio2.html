@@ -1,25 +1,23 @@
-DESAFIO 1: Escreva um programa que leia um número inteiro. 
-Se o número lido for positivo, escreva uma mensagem indicando se ele é par ou ímpar. 
-Se o número for negativo, escreva a seguinte mensagem: este número não é positivo:
+DESAFIO 2: Faça um algoritmo que receba o valor do salário de uma pessoa e o valor de um 
+financiamento pretendido. Caso o financiamento seja menor ou igual a 5x o salário da pessoa,
+o algoritmo deverá escrever “Financiamento concedido.”, senão ele escreverá “Financiamento negado.”.
+Independente de conceder ou não o financiamento, o algoritmo escvreverá no final “Obrigado por nos consultar.”:
 ------------------------------------------------------------------------------------------
 <head>
-    <meta charset="utf-8">
-    <title>Verificar Número</title>
+    <meta charset="UTF-8">
+    <title>Verificação de Financiamento</title>
 </head>
-
+<body>
     <script>
-        alert("É PAR OU ÍMPAR?");
+        alert ("VAMOS FINANCIAR?")
+        var salario = +prompt ("Digite o valor do seu salário: ");
+        var financiamento = +prompt ("Digite o valor do financiamento pretendido: ");
 
-        var numero = parseInt(prompt("Digite um número inteiro:"));
-
-        if (numero > 0) {
-            if (numero % 2 === 0) {
-                document.write("O número é positivo e par.");
-            } else {
-                document.write("O número é positivo e ímpar.");
-            }
+        if (financiamento <= 5 * salario) {
+            document.write ("Financiamento concedido!<br>");
         } else {
-            document.write("Este número não é positivo.");
+            document.write ("Financiamento negado!<br>");
         }
+        document.write ("Obrigado por nos consultar!");
     </script>
 ------------------------------------------------------------------------------------------
