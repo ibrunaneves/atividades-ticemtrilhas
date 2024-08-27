@@ -1,0 +1,30 @@
+DESAFIO 3: Escreva um algoritmo que calcule a média de um aluno numa dada disciplina e
+imprima o resultado. Regra: durante o semestre o aluno faz 3 avaliações com notas de 0 a 10. 
+É considerado aprovado, o aluno que consegue nota igual ou superior a 7. Se este ficar com
+nota menor que 7 e maior ou igual a 5, será considerado de recuperação. No entanto, se a nota
+for abaixo de 5, o aluno será considerado reprovado e deverá repetir o semestre:
+------------------------------------------------------------------------------------------
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado da média do aluno</title>
+</head>
+<body>
+    <script>
+        alert ("Vamos ver se você passou nesse semestre?");
+
+        var nota1 = +prompt ("Digite sua primeira nota (0 a 10): ");
+        var nota2 = +prompt ("Digite sua segunda nota (0 a 10): ");
+        var nota3 = +prompt ("Digite sua terceira nota (0 a 10): ");
+
+        var media = (nota1 + nota2 + nota3) / 3;
+
+        if (media >= 7) {
+            document.write ("Parabéns, você passou de semestre com média " + media.toFixed(2) + ".<br>");
+        } else if (media >= 5) {
+            document.write ("Poxa, você está de recuperação com média " + media.toFixed(2) + ".<br>");
+        } else {
+            document.write( "Infelizmente você foi reprovado com média " + media.toFixed(2) + ".<br>");
+        }
+        document.write ("Agradecemos por usar nosso sistema de análise!");
+    </script>
+------------------------------------------------------------------------------------------
