@@ -5,26 +5,43 @@ nota menor que 7 e maior ou igual a 5, será considerado de recuperação. No en
 for abaixo de 5, o aluno será considerado reprovado e deverá repetir o semestre:
 ------------------------------------------------------------------------------------------
 <head>
-    <meta charset="UTF-8">
-    <title>Resultado da média do aluno</title>
+	<meta charset="UTF-8">
+	<title>Programa solidário</title>
 </head>
-<body>
-    <script>
-        alert ("Vamos ver se você passou nesse semestre?");
+<script>
+	alert ("PROGRAMA SOLIDÁRIO")
 
-        var nota1 = +prompt ("Digite sua primeira nota (0 a 10): ");
-        var nota2 = +prompt ("Digite sua segunda nota (0 a 10): ");
-        var nota3 = +prompt ("Digite sua terceira nota (0 a 10): ");
+	var opcao = +prompt ("Escolha uma opção para efetuar sua doação:\n[1] para doar R$ 10 \n[2] para doar R$ 20 \n[3] para doar R$ 30 \n[4] para doar outros valores \n[5] para cancelar");
 
-        var media = (nota1 + nota2 + nota3) / 3;
+	var valorDoacao = 0;
 
-        if (media >= 7) {
-            document.write ("Parabéns, você passou de semestre com média " + media.toFixed(2) + ".<br>");
-        } else if (media >= 5) {
-            document.write ("Poxa, você está de recuperação com média " + media.toFixed(2) + ".<br>");
-        } else {
-            document.write( "Infelizmente você foi reprovado com média " + media.toFixed(2) + ".<br>");
-        }
-        document.write ("Agradecemos por usar nosso sistema de análise!");
-    </script>
+	switch (opcao) {
+	case 1:
+		valorDoacao = 10;
+		document.write ("Você doou R$ 10. Muito obrigado pela sua contribuição!");
+		break;
+	case 2:
+		valorDoacao = 20;
+		document.write ("Você doou R$ 20. Muito obrigado pela sua contribuição!");
+		break;
+	case 3:
+		valorDoacao = 30;
+		document.write ("Você doou R$ 30. Muito obrigado pela sua contribuição!");
+		break;
+	case 4:
+		valorDoacao = +prompt ("Digite o valor da doação: ");
+		if (valorDoacao < 0) {
+			document.write ("Valor inválido. A doação não foi registrada.");
+		} else {
+			document.write ("Você doou R$ " + valorDoacao.toFixed(2) + ". Muito obrigado pela sua contribuição!");
+		}
+		break;
+	case 5:
+		document.write ("A doação foi cancelada. Obrigado por considerar contribuir.");
+		break;
+	default:
+		document.write ("Opção inválida. Por favor, escolha uma opção válida.");
+		break;
+	}
+</script>
 ------------------------------------------------------------------------------------------
