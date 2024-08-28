@@ -1,1 +1,24 @@
-
+DESAFIO 3: Escreva um algoritmo que calcule a média de um aluno numa dada disciplina e
+imprima o resultado. Regra: durante o semestre o aluno faz 3 avaliações com notas de 0 a 10.
+É considerado aprovado, o aluno que consegue nota igual ou superior a 7. Se este ficar com
+nota menor que 7 e maior ou igual a 5, será considerado de recuperação. No entanto, se a
+nota for abaixo de 5, o aluno será considerado reprovado e deverá repetir o semestre:
+------------------------------------------------------------------------------------------
+<head>
+	<meta charset="UTF-8">
+	<title>Somador de Números</title>
+</head>
+<script>
+	alert ("Vamos somar alguns números!");
+	var numero;
+	var contador = 1;
+	var soma = 0;
+	var quantidade = +prompt ("Quantos números você deseja contar? ");
+	while (contador <= quantidade){
+		var numero = +prompt ("Digite o " + contador + "º. numero: ");
+		soma = soma + numero;
+		contador = contador +1;
+	}
+	document.write ("A soma desses números é igual a: " + soma);
+</script>
+------------------------------------------------------------------------------------------
