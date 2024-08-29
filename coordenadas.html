@@ -1,0 +1,31 @@
+DESAFIO: Escreva um programa para ler as coordenadas (x,y) de uma quantidade indeterminada
+de pontos no sistema cartesiano. Para cada ponto, escrever o quadrante a que ele pertence.
+O algoritmo será encerrado quando pelo menos uma das duas coordenadas for NULA.
+Nesta situaçao escreva a mensagem “Algoritmo interrompido!”.
+------------------------------------------------------------------------------------------
+<head>
+    <meta charset="UTF-8">
+    <title>Quadrante dos Pontos</title>
+</head>
+<script>
+    alert ("Vamos verificar os quadrantes dos pontos!");
+
+    while (true) {
+        var x = +prompt ("Digite a coordenada x: ");
+        var y = +prompt ("Digite a coordenada y: ");
+        if (x === 0 || y === 0) {
+            document.write ("Algoritmo interrompido! <br>");
+            break;
+        }
+        if (x > 0 && y > 0) {
+            document.write ("O ponto (" + x + ", " + y + ") está no Quadrante I. <br>");
+        } else if (x < 0 && y > 0) {
+            document.write ("O ponto (" + x + ", " + y + ") está no Quadrante II. <br>");
+        } else if (x < 0 && y < 0) {
+            document.write ("O ponto (" + x + ", " + y + ") está no Quadrante III. <br>");
+        } else if (x > 0 && y < 0) {
+            document.write ("O ponto (" + x + ", " + y + ") está no Quadrante IV. <br>");
+        }
+    }
+</script>
+------------------------------------------------------------------------------------------
