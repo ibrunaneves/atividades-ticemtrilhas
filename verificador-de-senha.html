@@ -1,0 +1,22 @@
+DESAFIO: Escreva um programa que repita a leitura de uma senha até que ela seja válida.
+Para cada leitura de senha incorreta informada, escrever a mensagem “Senha inválida,
+tente novamente.”. Quando a senha for informada corretamente, deve ser impressa a mensagem
+“Acesso autorizado.”, e o algoritmo encerrado. Considere que a senha correta é “senha2024”. 
+------------------------------------------------------------------------------------------
+<head>
+    <meta charset="UTF-8">
+    <title>Verificador de Senha</title>
+</head>
+<script>
+    var senhaCorreta = "senha2024";
+    var senha; 
+
+    while (senha !== senhaCorreta) {
+        senha = prompt ("Digite sua senha: "); 
+        if (senha !== senhaCorreta) {
+            alert ("Senha inválida, tente novamente!");
+        }
+    } 
+    alert ("Acesso autorizado.");
+</script>
+------------------------------------------------------------------------------------------
