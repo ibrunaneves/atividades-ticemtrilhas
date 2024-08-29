@@ -12,7 +12,7 @@ de semestre com base nas seguintes notas: > 7 - aprovado; ≥ 5 - recuperação;
 	var contador = 1;
 	var nota1, nota2, nota3;
 	// o número do contador é a quantidade de alunos que você quer analisar
-	while (contador <= 5){
+	while (contador <= 2){
 		aluno = prompt ("Digite o nome do aluno: ");
 		nota1 = +prompt ("Digite sua nota da prova 1: ");
 		nota2 = +prompt ("Digite sua nota da prova 2: ");
@@ -20,13 +20,13 @@ de semestre com base nas seguintes notas: > 7 - aprovado; ≥ 5 - recuperação;
 		var media = (nota1 + nota2 + nota3) /3; 
 		document.write ("A média de " + aluno + " esse semestre é: " + media.toFixed(2) + ".<br>");
 		if (media >= 7) {
-			document.write ("Parabéns, você passou com média " + media.toFixed(2) + "!<br>");
+			document.write ("Parabéns, você passou! <br>");
 		} else if (media >= 5) {
-			document.write ("Poxa, você está de recuperação com média " + media.toFixed(2) + "!<br>");
+			document.write ("Poxa, você está de recuperação... <br>");
 		} else {
-			document.write( "Infelizmente você foi reprovado com média " + media.toFixed(2) + "!<br>");
+			document.write( "Infelizmente você foi reprovado! <br>");
 		}
-		document.write ("---------------------------------------------- <br>");
+		document.write ("---------------------------------------------------------------------- <br>");
 		contador = contador +1;
 	}
 </script>
