@@ -1,0 +1,30 @@
+DESAFIO: Faça um algoritmo que leia um dado número e imprima na tela se este é ou não um número primo.
+------------------------------------------------------------------------------------------
+<head>
+	<meta charset="UTF-8">
+	<title>Verificador de Número Primo</title>
+</head>
+<script>
+	alert ("Vamos verificar se um número é primo!");
+
+	var numero = +prompt ("Digite um número: ");
+	var primo = true;
+
+	if (numero <= 1) {
+		primo = false; 
+	} else {
+		for (var i = 2; i < numero; i++) {
+			if (numero % i == 0) {
+				primo = false; 
+				break;
+			}
+		}
+	}
+
+	if (primo) {
+		document.write (numero + " é um número primo! <br>");
+	} else {
+		document.write (numero + " não é um número primo! <br>");
+	}
+</script>
+------------------------------------------------------------------------------------------
