@@ -1,0 +1,52 @@
+DESAFIO: Uma grande empresa deseja determinar qual de seus produtos tem a preferência
+de seus clientes. Escreva um algoritmo para ler o tipo de produto comprado
+Codificado da seguinte forma:
+1. Produto A;
+2. Produto B;
+3. Produto C;
+4. FIM. 
+Caso o usuário informe um código inválido (fora da caixa de 1 a 4, deve ser solicitado um
+novo código até que seja válido). O programa será encerrado quando o código informado for
+o número 4. Deve ser escrito a mensagem “Muito obrigado!” e a quantidade de clientes que
+compraram cada tipo de produto. 
+------------------------------------------------------------------------------------------
+<head>
+    <meta charset="UTF-8">
+    <title>Preferência de Produtos</title>
+</head>
+<body>
+    <script>
+        var contBase = 0;
+        var contCorretivo = 0;
+        var contBlush = 0;
+
+        alert ("Bem-vindo ao sistema de pesquisa de preferência de produtos!");
+
+        while (true) {
+            var codigo = +prompt ("Digite o código do produto:\n1: Base \n2: Corretivo \n3: Blush \n4: FIM");
+            switch (codigo) {
+                case 1:
+                    contBase++;
+                    break;
+                case 2:
+                    contCorretivo++;
+                    break;
+                case 3:
+                    contBlush++;
+                    break;
+                case 4:
+                    alert ("Muito obrigado pela preferência :)");
+                    document.write ("Quantidade de clientes que compraram base: " + contBase + "<br>");
+                    document.write ("Quantidade de clientes que compraram corretivo: " + contCorretivo + "<br>");
+                    document.write ("Quantidade de clientes que compraram blush: " + contBlush + "<br>");
+                    break;
+                default:
+                    alert ("Código inválido. Por favor, digite um código válido.");
+                    break;
+            }
+            if (codigo === 4) {
+                break;
+            }
+        }
+    </script>
+------------------------------------------------------------------------------------------
