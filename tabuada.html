@@ -1,0 +1,17 @@
+DESAFIO: Faça um algoritmo que leia um dado número e imprima na tela sua tabuada.
+------------------------------------------------------------------------------------------
+<head>
+	<meta charset="UTF-8">
+	<title>Tabuada</title>
+</head>
+<script>
+	alert ("Vamos fazer uma taubada?");
+	var contador = 1;
+	var numero = +prompt ("Digite qual número que você quer ver a tabuada: ");
+	do {
+		var multiplicacao = contador*numero
+		document.write (numero + "x" + contador + " = " + multiplicacao + "<br>");
+		contador = contador +1;
+	} while (contador <= 10)
+</script>
+------------------------------------------------------------------------------------------
