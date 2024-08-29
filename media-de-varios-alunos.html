@@ -1,0 +1,33 @@
+DESAFIO: Algoritmo interativo onde o usuário vai digitar o nome de vários alunos (5, por exemplo),
+vai ser somado as notas de 3 provas, vai ser calculada a média e dizer se o alunou passou ou não
+de semestre com base nas seguintes notas: > 7 - aprovado; ≥ 5 - recuperação; ≤ 5 - reprovado.
+------------------------------------------------------------------------------------------
+<head>
+	<meta charset="UTF-8">
+	<title>Analisador de Médias dos Alunos</title>
+</head>
+<script>
+	alert ("Vamos ver suas notas!");
+	var aluno;
+	var contador = 1;
+	var nota1, nota2, nota3;
+	// o número do contador é a quantidade de alunos que você quer analisar
+	while (contador <= 5){
+		aluno = prompt ("Digite o nome do aluno: ");
+		nota1 = +prompt ("Digite sua nota da prova 1: ");
+		nota2 = +prompt ("Digite sua nota da prova 2: ");
+		nota3 = +prompt ("Digite sua nota da prova 3: ");
+		var media = (nota1 + nota2 + nota3) /3; 
+		document.write ("A média de " + aluno + " é: " + media.toFixed(2) + ".<br>");
+		if (media >= 7) {
+            document.write ("Parabéns, você passou de semestre com média " + media.toFixed(2) + ".<br>");
+        } else if (media >= 5) {
+            document.write ("Poxa, você está de recuperação com média " + media.toFixed(2) + ".<br>");
+        } else {
+            document.write( "Infelizmente você foi reprovado com média " + media.toFixed(2) + ".<br>");
+        }
+		document.write ("---------------------------------------------- <br>");
+		contador = contador +1;
+	}
+</script>
+------------------------------------------------------------------------------------------
