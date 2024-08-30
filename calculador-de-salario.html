@@ -1,0 +1,28 @@
+DESAFIO: Um funcionário de uma empresa recebe, anualmente, um aumento salarial.
+Sabe-se que:
+a) Esse funcionário foi contratado em 2018, com o salário inicial de R$ 2.000;
+b) Em 2019 ele recebeu um aumento de 1,5% sobre seu salário inicial;
+c) A partir de 2020, os aumentos salariais sempre corresponderão ao dobro do percentual
+do ano anterior. Faça um programa que determine o salário desse funcionário no ano atual,
+apresentando todos os valores. 
+------------------------------------------------------------------------------------------
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular Salário com Aumentos</title>
+</head>
+<script>
+    alert ("Bem-vindo ao sistema de cálculo de salários!");
+    var nomeFuncionario = prompt ("Digite o nome do funcionário: ");
+    var salarioInicial = +prompt ("Digite o salário inicial do funcionário em 2018: ");
+    var salario = salarioInicial;
+    var aumentoPercentual = 1.5; 
+    document.write ("Nome do Funcionário: " + nomeFuncionario + "<br>");
+    document.write ("Salário inicial em 2018: R$ " + salario.toFixed(2) + "<br>");
+    document.write ("----------------------------------------------------- <br>");
+    for (var ano = 2019; ano <= 2024; ano++) {
+        salario += salario * (aumentoPercentual / 100);
+        document.write ("O salário em " + ano + " é de: R$ " + salario.toFixed(2) + "<br>");
+        aumentoPercentual *= 2; 
+    }
+</script>
+------------------------------------------------------------------------------------------
