@@ -1,0 +1,63 @@
+DESAFIO: Faça um algoritmo que compare 3 números, organizando-os
+em ordem crescente, decrescente ou a opção em que o maior número
+fique no meio.
+------------------------------------------------------------------------------------------
+<head>
+	<meta charset="UTF-8">
+	<title>Comparador de Números</title>
+</head>
+<script>
+	alert ("Digite três valores:");
+
+	var menor, medio, maior;
+	var n1 = +prompt ("Digite o 1º número: ");
+	var n2 = +prompt ("Digite o 2º número: ");
+	var n3 = +prompt ("Digite o 3º número: ");
+
+	alert ("Digite: \n[1] ordem crescente \n[2] ordem decrescente \n[3] o maior fica entre os dois");
+
+	var i = +prompt ("Digite a opção escolhida: ");
+
+	if (n1 > n2 && n1 > n3) {
+		if (n2 > n3) {
+			maior = n1;
+			medio = n2;
+			menor = n3;
+		} else {
+			maior = n1;
+			medio = n3;
+			menor = n2;
+		}
+	} else if (n2 > n1 && n2 > n3) {
+		if (n1 > n3) {
+			maior = n2;
+			medio = n1;
+			menor = n3;
+		} else {
+			maior = n2;
+			medio = n3;
+			menor = n1;
+		}
+	} else {
+		if (n1 > n2) {
+			maior = n3;
+			medio = n1;
+			menor = n2;
+		} else {
+			maior = n3;
+			medio = n2;
+			menor = n1;
+		}
+	}
+
+	if (i === 1) {
+		document.write ("Os números em ordem crescente são: " + menor + ", " + medio + ", " + maior + ".<br>");
+	} else if (i === 2) {
+		document.write ("Os números em ordem decrescente são: " + maior + ", " + medio + ", " + menor + ".<br>");
+	} else if (i === 3) {
+		document.write ("Os números em que o maior fique entre os dois outros são: " + menor + ", " + maior + ", " + medio + ".<br>");
+	} else {
+		document.write ("O número indicado não executa a tarefa!<br>");
+	}
+</script>
+------------------------------------------------------------------------------------------
