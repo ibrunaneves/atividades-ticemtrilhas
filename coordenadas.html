@@ -4,28 +4,28 @@ O algoritmo será encerrado quando pelo menos uma das duas coordenadas for NULA.
 Nesta situaçao escreva a mensagem “Algoritmo interrompido!”.
 ------------------------------------------------------------------------------------------
 <head>
-    <meta charset="UTF-8">
-    <title>Quadrante dos Pontos</title>
+	<meta charset="UTF-8">
+	<title>Análise do Sistema Cartesiano</title>
 </head>
 <script>
-    alert ("Vamos verificar os quadrantes dos pontos!");
+	alert ("nálise do Sistema Cartesiano");
 
-    while (true) {
-        var x = +prompt ("Digite a coordenada x: ");
-        var y = +prompt ("Digite a coordenada y: ");
-        if (x === 0 || y === 0) {
-            document.write ("Algoritmo interrompido! <br>");
-            break;
-        }
-        if (x > 0 && y > 0) {
-            document.write ("O ponto (" + x + ", " + y + ") está no Quadrante I. <br>");
-        } else if (x < 0 && y > 0) {
-            document.write ("O ponto (" + x + ", " + y + ") está no Quadrante II. <br>");
-        } else if (x < 0 && y < 0) {
-            document.write ("O ponto (" + x + ", " + y + ") está no Quadrante III. <br>");
-        } else if (x > 0 && y < 0) {
-            document.write ("O ponto (" + x + ", " + y + ") está no Quadrante IV. <br>");
-        }
-    }
+	var x = +prompt ("Digite a coordenada x: ");
+	var y = +prompt ("Digite a coordenada y: ");
+
+	while (x != 0 && y != 0){
+		if (x > 0 && y > 0) {
+			alert ("Quadrante I");
+		} else if (x < 0 && y > 0) {
+			alert ("Quadrante II");
+		} else if (x < 0 && y < 0) {
+			alert ("Quadrante III");
+		} else {
+			alert ("Quadrante IV");
+		}
+		x = +prompt ("Digite  a coordenada x: ");
+		y = +prompt ("Digite a coordenada y: ");
+	}
+	document.write ("Algoritmo interrompido.");
 </script>
 ------------------------------------------------------------------------------------------
