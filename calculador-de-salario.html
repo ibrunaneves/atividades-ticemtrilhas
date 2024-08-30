@@ -12,17 +12,21 @@ apresentando todos os valores.
 </head>
 <script>
     alert ("Bem-vindo ao sistema de cálculo de salários!");
-    var nomeFuncionario = prompt ("Digite o nome do funcionário: ");
-    var salarioInicial = +prompt ("Digite o salário inicial do funcionário em 2018: ");
-    var salario = salarioInicial;
-    var aumentoPercentual = 1.5; 
-    document.write ("Nome do Funcionário: " + nomeFuncionario + "<br>");
-    document.write ("Salário inicial em 2018: R$ " + salario.toFixed(2) + "<br>");
-    document.write ("----------------------------------------------------- <br>");
-    for (var ano = 2019; ano <= 2024; ano++) {
-        salario += salario * (aumentoPercentual / 100);
-        document.write ("O salário em " + ano + " é de: R$ " + salario.toFixed(2) + "<br>");
-        aumentoPercentual *= 2; 
+
+    var funcionario, anoAtual, salario, novoSalario, percentual;
+
+    funcionario = prompt ("Digite o nome do funcionário: ");
+    anoAtual = +prompt ("Digite o ano atual: ");
+    salario = +prompt ("Digite o salário inicial: ");
+    percentual = (1.5 /100);
+    novoSalario = (salario + percentual*salario);
+    document.write ("O salário de " + funcionario + " com o primeiro aumento: R$" + novoSalario.toFixed(2) + ".<br>");
+    document.write ("-------------------------------------------------------------------------------<br>");
+
+    for (i = 2020; i <= anoAtual; i++) {
+    	percentual = 2*percentual;
+    	novoSalario = novoSalario + percentual*novoSalario;
+    	document.write ("Em " + i + ", o novo salário será de: R$" + novoSalario.toFixed(2) + ".<br>");
     }
 </script>
 ------------------------------------------------------------------------------------------
