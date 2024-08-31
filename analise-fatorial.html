@@ -15,15 +15,15 @@ número pode ser calculado através di fatorial de seu antecessor.
 
         function fatorial(num) {
             if (num < 0) {
-                return -1; // Retorna -1 para indicar erro se o número for negativo
+                return -1; 
             } else if (num === 0) {
                 return 1; // O fatorial de 0 é 1
             } else {
-                return num * fatorial(num - 1); // Chamada recursiva com correção
+                return num * fatorial(num - 1); 
             }
         }
 
         var num = +prompt ("Digite o número para obter o fatorial: ");
-        document.write ("O fatorial de " + num + " é " + fatorial(num) + "."); // Correção na concatenação
+        document.write ("O fatorial de " + num + " é " + fatorial(num) + "."); 
     </script>
 ------------------------------------------------------------------------------------------
