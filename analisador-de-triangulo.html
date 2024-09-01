@@ -5,25 +5,29 @@ Lembrando que um triângulo é:
 * isósceles - aquele que tem pelo menos dois lados com a mesma medida.
 ------------------------------------------------------------------------------------------
 <head>
-	<meta charset="UTF-8">
-	<title>Analisador de Triângulo</title>
+    <meta charset="UTF-8">
+    <title>Analisador de Triângulo</title>
 </head>
 <script>
+    alert("Vamos analisar um triângulo!");
 
-	alert ("Vamos analisar um triângulo!");
+    var L1 = +prompt("Digite o lado 1: ");
+    var L2 = +prompt("Digite o lado 2: ");
+    var L3 = +prompt("Digite o lado 3: ");
 
-	var L1 = +prompt ("Digite o lado 1: ");
-	var L2 = +prompt ("Digite o lado 2: ");
-	var L3 = +prompt ("Digite o lado 3: ");
+    // Verifica se pode formar um triângulo
+    var podeFormarTriangulo = (L1 + L2) > L3 && (L2 + L3) > L1 && (L1 + L3) > L2;
+    document.write("Pode formar um triângulo? " + (podeFormarTriangulo ? "Sim" : "Não") + ".<br>");
 
-	var triangulo = (L1+L2)>L3 && (L2+L3)>L1 && (L1+L3)>L2;
-	document.write ("Pode formar um triângulo? " + triangulo + ".<br>");
-	var teq = (L1==L2) && (L2==L3);
-	document.write ("É um triangulo equilátero? " + teq + ".<br>");
-	var tes = (L1!=L2) && (L2!=L3) && (L1!=L3);
-	document.write ("É um triângulo escaleno? " + tes + ".<br>");
-	var tis = (L1==L2) && (L1!=L3) || (L1==L3) && (L1!=L2) || (L2==L3) && (L1!=L3);
-	document.write ("É um triângulo isósceles? " + tis + ".<br>");
-  
+    if (podeFormarTriangulo) {
+        // Determina o tipo de triângulo
+        if (L1 == L2 && L2 == L3) {
+            document.write("É um triângulo equilátero.<br>");
+        } else if (L1 == L2 || L1 == L3 || L2 == L3) {
+            document.write("É um triângulo isósceles.<br>");
+        } else {
+            document.write("É um triângulo escaleno.<br>");
+        }
+    }
 </script>
 ------------------------------------------------------------------------------------------
